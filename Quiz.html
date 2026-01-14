@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title> Quiz</title>
+
+<style>
+body{
+font-family:SolaimanLipi,Arial;
+background:#f3f6fa;
+margin:0;
+}
+header{
+background:#0d47a1;
+color:white;
+text-align:center;
+padding:20px;
+}
+section{
+padding:15px;
+}
+select,button{
+padding:8px;
+margin:8px 0;
+font-size:16px;
+}
+.quiz-box{
+background:white;
+padding:15px;
+border-radius:6px;
+box-shadow:0 0 5px #aaa;
+margin-top:10px;
+}
+.option{
+margin:5px 0;
+}
+.timer{
+color:red;
+font-weight:bold;
+font-size:18px;
+}
+footer{
+background:#0d47a1;
+color:white;
+text-align:center;
+padding:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>⏱️Quiz</h1>
+<p>  MCQ Test</p>
+</header>
+
+<section>
+
+<label>📘 Subject নির্বাচন করুন:</label><br>
+<select id="subject" onchange="loadQuiz()">
+<option value="">--Select--</option>
+<option value="science">Science</option>
+<option value="math">Math</option>
+<option value="reasoning">Reasoning</option>
+<option value="geography">Geography</option>
+<option value="history">History</option>
+</select>
+
+<div class="timer" id="timer"></div>
+
+<div class="quiz-box" id="quiz"></div>
+
+<button onclick="submitQuiz()">Submit Quiz</button>
+
+<div id="result"></div>
+
+</section>
+
+<footer>
+© ২০২৬ Time Limit Quiz | Education Website
+</footer>
+
+<script>
+let time = 60;
+let interval;
+let correct = 0;
+
+const quizData = {
+science:[
+{
+q:"বিদ্যুৎ প্রবাহের SI একক কী?",
+o:["ভোল্ট","ওহম","অ্যাম্পিয়ার","জুল"],
+a:2
+},
+{
+q:"সালোকসংশ্লেষণ কোথায় ঘটে?",
+o:["মাইটোকন্ড্রিয়া","নিউক্লিয়াস","ক্লোরোপ্লাস্ট","রাইবোজোম"],
+a:2
+}
+],
+math:[
+{
+q:"√144 = ?",
+o:["10","11","12","13"],
+a:2
+},
+{
+q:"2x = 10 হলে x = ?",
+o:["3","4","5","6"],
+a:2
+}
+],
+reasoning:[
+{
+q:"A : Z :: B : ?",
+o:["Y","X","A","C"],
+a:0
+},
+{
+q:"2, 4, 8, 16, ?",
+o:["18","24","32","20"],
+a:2
+}
+]
+};
+
+function loadQuiz(){
+clearInterval(interval);
+time = 60;
+correct = 0;
+document.getElementById("result").innerHTML="";
+document.getElementById("timer").innerHTML="⏳ Time: 60 sec";
+
+interval = setInterval(()=>{
+time--;
+document.getElementById("timer").innerHTML="⏳ Time: "+time+" sec";
+if(time<=0){
+clearInterval(interval);
+submitQuiz();
+}
+},1000);
+
+let sub = document.getElementById("subject").value;
+let html = "";
+quizData[sub].forEach((item,i)=>{
+html+=`<p><b>Q${i+1}. ${item.q}</b></p>`;
+item.o.forEach((op,j)=>{
+html+=`<div class="option">
+<input type="radio" name="q${i}" value="${j}"> ${op}
+</div>`;
+});
+});
+document.getElementById("quiz").innerHTML = html;
+}
+
+function submitQuiz(){
+clearInterval(interval);
+let sub = document.getElementById("subject").value;
+quizData[sub].forEach((item,i)=>{
+let ans = document.querySelector('input[name="q'+i+'"]:checked');
+if(ans && parseInt(ans.value) === item.a){
+correct++;
+}
+});
+document.getElementById("result").innerHTML =
+"<h3>✅ Score: "+correct+" / "+quizData[sub].length+"</h3>";
+}
+</script>
+
+</body>
+</html>

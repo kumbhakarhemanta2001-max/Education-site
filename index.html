@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>বাংলা শিক্ষা তথ্য</title>
+<style>
+body{font-family:SolaimanLipi,Arial;background:#eef2f3;margin:0}
+header{background:#1a237e;color:#fff;padding:20px;text-align:center}
+nav{background:#283593;padding:10px;text-align:center}
+nav a{color:#fff;margin:0 10px;text-decoration:none;font-weight:bold}
+section{padding:15px}
+.card{background:#fff;padding:15px;margin-bottom:12px;border-radius:6px}
+footer{background:#1a237e;color:#fff;text-align:center;padding:10px}
+button{
+background:#283593;
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:5px;
+margin-bottom:10px;
+}
+#monthly-pdf a{
+display:block;
+margin:8px 0;
+background:#1a237e;
+color:white;
+padding:8px 12px;
+border-radius:5px;
+text-decoration:none;
+width:fit-content;
+}
+footer{
+background:#1a237e;
+color:white;
+text-align:center;
+padding:20px 10px;
+}
+
+.footer-categories{
+margin:10px 0;
+}
+
+.footer-categories a{
+display:inline-block;
+margin:5px;
+padding:6px 10px;
+background:#283593;
+color:white;
+text-decoration:none;
+border-radius:4px;
+font-size:14px;
+}
+
+.footer-categories a:hover{
+background:#3949ab;
+}
+.sub-category-buttons button{
+background:#3949ab;
+color:white;
+border:none;
+padding:6px 10px;
+margin:4px;
+border-radius:4px;
+font-size:14px;
+}
+
+.sub-category{
+display:none; /* Default hide all */
+margin-top:10px;
+}
+footer{
+background:#1a237e;
+color:white;
+text-align:center;
+padding:10px;
+}
+footer a{
+color:#fff;
+text-decoration:none;
+margin:0 5px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>বাংলা শিক্ষা তথ্য</h1>
+<p>শিক্ষা সংক্রান্ত সকল আপডেট</p>
+</header>
+
+<nav>
+<a href="#">হোম</a>
+<a href="#">নোটিস</a>
+<a href="#">সিলেবাস</a>
+<a href="#">প্রশ্নপত্র</a>
+<a href="#">ফলাফল</a>
+<a href="#monthly-pdf">মাসিক কারেন্ট অ্যাফেয়ার্স PDF</a>
+</nav>
+
+
+<section>
+    <input type="text" id="searchInput" placeholder="ক্লাস বা বিষয় লিখুন..."
+onkeyup="searchPDF()" style="
+width:90%;
+padding:10px;
+margin:15px;
+font-size:16px;
+">
+<div class="card pdf-item">
+    <div><a href="Daily current affairs quiz.html">Daily Current Affairs</a></div>
+<h3>PDF নোটস ডাউনলোড</h3>
+
+<p>📘 Class 10 Mathematics</p>
+<a href="class10_math.pdf" download>
+<button>ডাউনলোড করুন</button>
+</a>
+
+<p>📗 Class 9 Science</p>
+<a href="class9_math.pdf" download>
+<button>ডাউনলোড করুন</button>
+</a>
+<p>📗 Group D science</p>
+<a href="Group D Science.pdf" download>
+<button>ডাউনলোড করুন</button>
+</a>
+<p>📗 Technician G3 Science </p>
+<a href="Technician G3 Science .pdf" download>
+<button>ডাউনলোড করুন</button>
+</a>
+<p>📗Group D Math practice Set </p>
+<a href=" Group D Math.pdf" download>
+<button>ডাউনলোড করুন</button>
+</a>
+
+</div>
+<div class="card" id="current">
+<h2>📰 কারেন্ট অ্যাফেয়ার্স</h2>
+
+<p><b>📅 জানুয়ারি ২০২৬</b></p>
+<ul>
+<li>ভারত সরকার নতুন শিক্ষা নীতি আপডেট প্রকাশ করেছে।</li>
+<li>ISRO সফলভাবে নতুন স্যাটেলাইট উৎক্ষেপণ করেছে।</li>
+<li>ভারতের নতুন প্রধান বিচারপতি শপথ গ্রহণ করেছেন।</li>
+<li>১ জানুয়ারি ভারত-পাকিস্তান পারমাণবিক স্থাপনার তালিকা বিনিময় ৩৫ তম বার সম্পন্ন।</li>
+<li>৯ জানুয়ারি থেকে RBI দিল্লির সরকারি ব্যাংকিং কার্যক্রম নিয়ন্ত্রণে নেয়। </li>
+<li>৫ জানুয়ারি, অসমে ৫.১ মাত্রার ভূমিকম্পে তিনজন আহত। </li>
+<li>৯ জানুয়ারি, হিমাচলে বাস খাদে পড়ে ১৪ জন নিহত। </li>
+
+</ul>
+
+</div>
+<div>
+    <a href="#monthly-pdf">মাসিক কারেন্ট অ্যাফেয়ার্স 2025 PDF</a>
+</div>
+<div class="card pdf-item" id="monthly-pdf">
+<h2>🗓️ মাসিক কারেন্ট অ্যাফেয়ার্স (PDF)</h2>
+
+<h3>২০২৬</h3>
+
+<a href="jan_2026_current_affairs.pdf" download>
+📄 জানুয়ারি ২০২৬ PDF
+</a><br>
+
+<a href="feb_2026_current_affairs.pdf" download>
+📄 ফেব্রুয়ারি ২০২৬ PDF
+</a><br>
+
+<a href="mar_2026_current_affairs.pdf" download>
+📄 মার্চ ২০২৬ PDF
+</a><br>
+
+<a href="apr_2026_current_affairs.pdf" download>
+📄 এপ্রিল ২০২৬ PDF
+</a>
+
+</div>
+<div class="card category" id="mp">
+<h2>🧪 MP Science Question</h2>
+
+<!-- Sub-category Buttons -->
+<div class="sub-category-buttons">
+<button onclick="showSubCategory('physics')">ভৌত বিজ্ঞান</button>
+<button onclick="showSubCategory('chemistry')">রসায়ন</button>
+<button onclick="showSubCategory('biology')">জীবন বিজ্ঞান</button>
+</div>
+
+<!-- Physics Questions -->
+<div class="sub-category" id="physics">
+<h3>📘 ভৌত বিজ্ঞান (Physics)</h3>
+<ol>
+<li>ওহমের সূত্রটি লেখো।</li>
+<li>বিদ্যুৎ শক্তির SI একক কী?</li>
+<li>রোধ কাকে বলে?</li>
+<li>জুলের সূত্র লিখ।</li>
+</ol>
+</div>
+
+<!-- Chemistry Questions -->
+<div class="sub-category" id="chemistry">
+<h3>📗 রসায়ন (Chemistry)</h3>
+<ol>
+<li>অম্ল, ক্ষার ও লবণের সংজ্ঞা দাও।</li>
+<li>রাসায়নিক বিক্রিয়া কাকে বলে?</li>
+<li>pH স্কেল কী?</li>
+<li>NaCl এর ব্যবহার লিখ।</li>
+</ol>
+</div>
+
+<!-- Biology Questions -->
+<div class="sub-category" id="biology">
+<h3>📙 জীবন বিজ্ঞান (Biology)</h3>
+<ol>
+<li>মানব হৃদপিণ্ডের গঠন লেখো।</li>
+<li>শ্বাসক্রিয়া কাকে বলে?</li>
+<li>উদ্ভিদ হরমোন কাকে বলে?</li>
+<li>কিডনির কাজ কি?</li>
+</ol>
+</div>
+
+</div>
+</section>
+
+<footer>
+© ২০২৬ বাংলা শিক্ষা তথ্য
+</footer>
+<script>
+function searchPDF() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let items = document.getElementsByClassName("pdf-item");
+
+  for (let i = 0; i < items.length; i++) {
+    let text = items[i].innerText.toLowerCase();
+    if (text.includes(input)) {
+      items[i].style.display = "";
+    } else {
+      items[i].style.display = "none";
+    }
+  }
+}
+</script>
+<script>
+function showSubCategory(id){
+  let subs = document.getElementsByClassName("sub-category");
+  for(let i=0;i<subs.length;i++){
+    subs[i].style.display="none";
+  }
+  document.getElementById(id).style.display="block";
+}
+</script>
+<footer>
+
+<h3>📂 ক্যাটাগরি</h3>
+
+<div class="footer-categories">
+<a href="MP Science Question.html">MP Science Question</a>
+<a href="#ca">Current Affairs</a>
+<a href="rrb group d math.html">RRB Group D Math</a>
+<a href="rrb groupd science.html">RRB Group D Science</a>
+<a href="#techmath">RRB Technician Math</a>
+<a href="#mts">SSC MTS</a>
+<a href="#chsl">SSC CHSL Math</a>
+<a href="#reason">Reasoning</a>
+<a href="#quize">Quiz</a>
+</div>
+
+<p>© ২০২৬ Education Website | All Rights Reserved</p>
+
+</footer>
+<footer>
+<a href="privacy-policy.html">Privacy Policy</a> |
+<a href="disclaimer.html">Disclaimer</a>
+<p>© ২০২৬ Education Website</p>
+<a href="about-us.html">About Us</a>
+ <a href="contact-us.html">Contact Us</a>
+</footer>
+</body>
+</html>
