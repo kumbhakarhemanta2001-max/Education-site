@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>RRB Group D Science</title>
+
+<style>
+body{
+font-family:SolaimanLipi,Arial;
+background:#eef2f3;
+margin:0;
+}
+header{
+background:#1a237e;
+color:white;
+padding:20px;
+text-align:center;
+}
+nav{
+background:#283593;
+padding:10px;
+text-align:center;
+}
+nav a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+font-weight:bold;
+}
+section{
+padding:15px;
+}
+.card{
+background:white;
+padding:15px;
+margin-bottom:15px;
+border-radius:6px;
+box-shadow:0 0 5px #ccc;
+}
+.topic h3{
+color:#1a237e;
+}
+button{
+background:#283593;
+color:white;
+border:none;
+padding:6px 10px;
+border-radius:4px;
+margin:5px 0;
+}
+.answer{
+display:none;
+margin-left:10px;
+color:#000;
+}
+footer{
+background:#1a237e;
+color:white;
+text-align:center;
+padding:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>RRB Group D Science</h1>
+<p>Topic-wise Question & Answer</p>
+</header>
+
+<nav>
+<a href="index.html">হোম</a>
+<a href="#physics">Physics</a>
+<a href="#chemistry">Chemistry</a>
+<a href="#biology">Biology</a>
+</nav>
+
+<section>
+
+<!-- Physics -->
+<div class="card topic" id="physics">
+<h3>🔬 Physics</h3>
+
+<p>1. বল কাকে বলে?</p>
+<button onclick="toggleAns('p1')">Answer</button>
+<p class="answer" id="p1">বল হলো এমন একটি প্রভাব যা বস্তুর গতি বা আকার পরিবর্তন করে।</p>
+</p>
+
+
+<p>2. কাজের SI একক কী?</p>
+<button onclick="toggleAns('p2')">Answer</button>
+<p class="answer" id="p2">জুল (Joule)</p>
+<p>3. কার্য = ?</p>
+<button onclick="toggleAns('p3')">Answer</button>
+<p class="answer" id="p3"> বল X সরণ (Joule)</p>
+<p>4. কার্য কী রাশি?</p>
+<button onclick="toggleAns('p4')">Answer</button>
+<p class="answer" id="p4"> স্কেলার রাশি (Joule)</p>
+
+</div>
+
+<!-- Chemistry -->
+<div class="card topic" id="chemistry">
+<h3>⚗️ Chemistry</h3>
+
+<p>1. অম্ল কাকে বলে?</p>
+<button onclick="toggleAns('c1')">Answer</button>
+<p class="answer" id="c1">যে পদার্থ জলীয় দ্রবণে H⁺ আয়ন দেয় তাকে অম্ল বলে।</p>
+
+<p>2. সাধারণ লবণের রাসায়নিক নাম কী?</p>
+<button onclick="toggleAns('c2')">Answer</button>
+<p class="answer" id="c2">সোডিয়াম ক্লোরাইড (NaCl)</p>
+<p>3. মিউরিয়েটিক অ্যাসিড কোনটি?</p>
+<button onclick="toggleAns('c3')">Answer</button>
+<p class="answer" id="c3">HCI
+
+</div>
+
+<!-- Biology -->
+<div class="card topic" id="biology">
+<h3>🧬 Biology</h3>
+
+<p>5. সালোকসংশ্লেষণ কাকে বলে?</p>
+<button onclick="toggleAns('b1')">Answer</button>
+<p class="answer" id="b1">উদ্ভিদ সূর্যালোকের সাহায্যে খাদ্য তৈরির প্রক্রিয়াকে সালোকসংশ্লেষণ বলে।</p>
+
+<p>6. মানব হৃদপিণ্ডে কয়টি প্রকোষ্ঠ আছে?</p>
+<button onclick="toggleAns('b2')">Answer</button>
+<p class="answer" id="b2">৪টি</p>
+</div>
+
+</section>
+
+<footer>
+© ২০২৬ RRB Group D Science | Education Website
+</footer>
+
+<script>
+function toggleAns(id){
+let ans = document.getElementById(id);
+if(ans.style.display === "none"){
+ans.style.display = "block";
+}else{
+ans.style.display = "none";
+}
+}
+</script>
+
+</body>
+</html>
